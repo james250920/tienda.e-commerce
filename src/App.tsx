@@ -1,21 +1,20 @@
-import React from 'react'
+
+
 import './App.css'
 import HeaderComponent from './layout/header/header.component'
 import FooterComponent from './layout/footer/footer.component'
+import Routers from './routers/routers.route'
+import { BrowserRouter as Router } from 'react-router-dom';
+
 
 function App() {
-
   return (
-    <>
+    <Router>
       <HeaderComponent />
-
-      <main>
-        <h1>Welcome to the App</h1>
-        <p>This is the main content area.</p>
-      </main>
+      <Routers />
       <FooterComponent />
-    </>
-  )
+    </Router>
+  );
 }
 
 export default App

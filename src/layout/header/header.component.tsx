@@ -1,6 +1,8 @@
 
 import React, { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './header.component.css';
+import SecondHeaderComponent from './second-header.component';
 
 export default function HeaderComponent() {
   const [showSearch, setShowSearch] = useState(false);
@@ -31,6 +33,7 @@ export default function HeaderComponent() {
   }, [showSearch]);
 
   return (
+    <>
     <header className="header w-100" style={{ minHeight: '100px', background: '#a4a1a1' }}>
       {/* Mobile: nombre, icono buscador y otros iconos en una sola fila */}
       <div className="container-fluid d-block d-md-none p-0 position-relative">
@@ -47,15 +50,15 @@ export default function HeaderComponent() {
             >
               <span className="material-icons" style={{ fontSize: 28 }}>search</span>
             </a>
-            <a href="#" style={{ color: '#090909' }} title="Favoritos">
+            <Link to="/favorite" style={{ color: '#090909' }} title="Favoritos">
               <span className="material-icons" style={{ fontSize: 24 }}>favorite_border</span>
-            </a>
-            <a href="#" style={{ color: '#090909' }} title="Carrito">
+            </Link>
+            <Link to="/cart" style={{ color: '#090909' }} title="Carrito">
               <span className="material-icons" style={{ fontSize: 24 }}>shopping_cart</span>
-            </a>
-            <a href="#" style={{ color: '#090909' }} title="Cuenta">
+            </Link>
+            <Link to="/profile" style={{ color: '#090909' }} title="Cuenta">
               <span className="material-icons" style={{ fontSize: 24 }}>person_outline</span>
-            </a>
+            </Link>
           </div>
         </div>
         {/* Input flotante de búsqueda */}
@@ -101,19 +104,24 @@ export default function HeaderComponent() {
 
           {/* Iconos */}
           <div className="d-flex align-items-center gap-3 ms-md-4 justify-content-center">
-            <a href="#" style={{ color: '#090909' }} title="Favoritos">
+            <Link to="/favorite" style={{ color: '#090909' }} title="Favoritos">
               <span className="material-icons" style={{ fontSize: 28 }}>favorite_border</span>
-            </a>
-            <a href="#" style={{ color: '#090909' }} title="Carrito">
+            </Link>
+            <Link to="/cart" style={{ color: '#090909' }} title="Carrito">
               <span className="material-icons" style={{ fontSize: 28 }}>shopping_cart</span>
-            </a>
-            <a href="#" style={{ color: '#090909' }} title="Cuenta">
+            </Link>
+            <Link to="/profile" style={{ color: '#090909' }} title="Cuenta">
               <span className="material-icons" style={{ fontSize: 28 }}>person_outline</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
     </header>
+    <div className='second-header'>
+      <SecondHeaderComponent />
+    </div>
+
+    </>
   );
 }
 
