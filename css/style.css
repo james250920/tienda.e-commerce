@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+html, body {
+    height: 100%;
+}
+
+body{
+    background-color: #e7e3dd;
+    font-family: 'Urbanist', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    gap: 2rem;
+    background-color: #625f5e;
+}
+
+.logo {
+    flex: 0 0 auto;
+}
+
+header {
+    background-color: #625f5e;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.header-main {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.search-bar {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #fff;
+    padding: 4px 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 8px 10px;
+    border-radius: 6px 0 0 6px;
+    font-size: 1em;
+    background: transparent;
+}
+
+.search-bar button {
+    border: none;
+    background: #0078d7;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.search-bar button:hover {
+    background: #005fa3;
+}
+
+h1 {
+    text-align: center;
+    color: #514caf;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.2s, background 0.2s;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.nav-menu li a:hover {
+    color: #0078d7;
+    background: #fff;
+}
+
+.material-symbols-outlined {
+    font-size: 1.5rem;
+    vertical-align: middle;
+    color: #fff;
+    transition: color 0.2s;
+}
+
+.nav-menu li a:hover .material-symbols-outlined {
+    color: #0078d7;
+}
+
+/* Footer styles */
+footer {
+    background-color: #625f5e;
+    color: #fff;
+    padding: 32px 0 14px 0;
+    text-align: center;
+    border-top-left-radius: 34px;
+    border-top-right-radius: 34px;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.07);
+    margin-top: 40px;
+    flex-shrink: 0;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container p {
+    margin: 0 0 18px 0;
+    font-size: 1.1em;
+    letter-spacing: 0.5px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.social-media span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff2;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    transition: background 0.2s, transform 0.2s;
+    cursor: pointer;
+}
+
+.social-media span:hover {
+    background: #ffd70033;
+    transform: scale(1.12);
+}
+
+.social-media img {
+    width: 26px;
+    height: 26px;
+    /* Elimina filtros que puedan afectar la visibilidad */
+    filter: none;
+    transition: transform 0.2s;
+}
+
+.social-media span:hover img {
+    /* Efecto de escala al hacer hover, sin afectar visibilidad */
+    transform: scale(1.15);
+}
+
+@media (max-width: 900px) {
+    .header-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        padding: 16px 10px;
+    }
+    .header-main {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .nav-menu {
+        justify-content: center;
+        gap: 1rem;
+    }
+    .footer-container {
+        padding: 0 10px;
+    }
+    .social-media {
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        background-color: #f0f0f0;
+    }
+    h1 {
+        font-size: 1.2em;
+    }
+    .header-container {
+        padding: 10px 2px;
+    }
+    .logo img {
+        width: 70px;
+    }
+    .nav-menu li a {
+        font-size: 1em;
+        padding: 4px 8px;
+    }
+    .footer-container {
+        padding: 0 5px;
+    }
+    .social-media {
+        gap: 0.7rem;
+    }
+    footer {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        padding: 22px 0 10px 0;
+    }
+}
