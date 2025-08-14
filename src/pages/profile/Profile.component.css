@@ -1,0 +1,115 @@
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+}
+
+.nav-pills .nav-link {
+  color: #6c757d;
+  border-radius: 0.375rem;
+  margin: 0 0.25rem;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #198754;
+  color: white;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -30px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.timeline-content {
+  padding-left: 10px;
+}
+
+.checkout-steps {
+  margin-bottom: 2rem;
+}
+
+.step {
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e9ecef;
+  color: #6c757d;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.step.active .step-number {
+  background-color: #198754;
+  color: white;
+}
+
+.step-label {
+  display: block;
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.step.active .step-label {
+  color: #198754;
+  font-weight: 600;
+}
+
+.impact-metric {
+  padding: 1rem;
+  text-align: center;
+}
+
+.achievement-badge {
+  transition: transform 0.2s ease;
+}
+
+.achievement-badge:hover {
+  transform: translateY(-2px);
+}
+
+.eco-stats h4 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .nav-pills {
+    flex-direction: column;
+  }
+  
+  .nav-pills .nav-link {
+    margin: 0.25rem 0;
+  }
+  
+  .checkout-steps .step {
+    padding: 0.5rem;
+  }
+  
+  .step-number {
+    width: 32px;
+    height: 32px;
+    font-size: 0.875rem;
+  }
+}

@@ -1,4 +1,3 @@
-import React from 'react'
 import './second-header.component.css';
 import { Link } from 'react-router-dom';
 
